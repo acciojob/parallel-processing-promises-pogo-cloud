@@ -17,7 +17,7 @@ function loadImage(url){
 	})
 }
 btn.addEventListener("click",()=>{
-	let promises=Images.map(image=>loadImage(image.url));
+	let promises=images.map(image=>loadImage(image.url));
 	Promise.all(promises)
 	.then(imgs=>{
 		imgs.forEach(img=>output.appendChild(img));
